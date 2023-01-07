@@ -5,7 +5,7 @@
 
 This is the code repository for [Flutter for Beginners - Third Edition](https://www.packtpub.com/product/flutter-for-beginners-third-edition), published by Packt.
 
-**An introductory guide to building cross-platform mobile applications with Flutter 2.5 and Dart**
+**An introductory guide to building cross-platform mobile applications with Flutter 3 and Dart**
 
 ## What is this book about?
 There have been many attempts at creating frameworks that are truly cross-platform, but most struggle to create a native-like experience at high performance levels. Flutter achieves this with an elegant design and a wealth of third-party plugins, making it the future of mobile app development. If you are a mobile developer who wants to create rich and expressive native apps with the latest Google Flutter framework, this book is for you.
