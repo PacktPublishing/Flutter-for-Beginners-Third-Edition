@@ -24,7 +24,7 @@ alt="https://www.packtpub.com/" border="5" /></a>
 
 
 ## Instructions and Navigations
-All of the code is organized into sub-folders within either the lib or test top-level folders. For example, Chapter02.
+All of the code is organized into sub-folders within either the lib or test top-level folders. For example, Chapter01.
 
 The code will look like the following:
 ```
@@ -35,6 +35,11 @@ print('hello ${i + 1}');
 }
 
 ```
+
+## Running the code
+To run the code you will need to specify which chapter you wish to run because there is a main.dart within each chapter folder.
+Use the following command with the correct chapter number:
+flutter run -t lib/Chapter01/main.dart
 
 **Following is what you need for this book:**
 
