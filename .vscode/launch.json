@@ -7,13 +7,15 @@
         {
             "name": "hello_world",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "program": "lib/Chapter01/main.dart"
         },
         {
             "name": "hello_world (profile mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "flutterMode": "profile",
+            "program": "lib/Chapter01/main.dart"
         },
         {
             "name": "hello_world (release mode)",
