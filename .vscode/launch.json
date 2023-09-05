@@ -5,23 +5,41 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "hello_world",
+            "name": "Chapter 01",
             "request": "launch",
             "type": "dart",
             "program": "lib/Chapter01/main.dart"
         },
         {
-            "name": "hello_world (profile mode)",
+            "name": "Chapter 01 (profile mode example)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile",
             "program": "lib/Chapter01/main.dart"
         },
         {
-            "name": "hello_world (release mode)",
+            "name": "Chapter 01 (release mode example)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
+        },
+        {
+            "name": "Chapter 05 - main_column",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/Chapter05/main_column.dart"
+        },
+        {
+            "name": "Chapter 05 - main_column_too_long",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/Chapter05/main_column_too_long.dart"
+        },
+        {
+            "name": "Chapter 05 - main_list_view",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/Chapter05/main_list_view.dart"
         }
     ]
 }
