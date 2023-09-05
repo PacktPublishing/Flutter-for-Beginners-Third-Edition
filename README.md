@@ -37,8 +37,8 @@ print('hello ${i + 1}');
 ```
 
 ## Running the code
-To run the code you will need to specify which chapter you wish to run because there is a main.dart within each chapter folder.
-Use the following command with the correct chapter number:
+To run the code you will need to specify which chapter you wish to run, and which main method to run within the chapter, because the code is split by chapter and, in some chapters, there are multiple files with main methods within them.
+Use the following command with the correct chapter number and main file name:
 flutter run -t lib/Chapter01/main.dart
 
 **Following is what you need for this book:**
