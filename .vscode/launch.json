@@ -40,6 +40,18 @@
             "request": "launch",
             "type": "dart",
             "program": "lib/Chapter05/main_list_view.dart"
+        },
+        {
+            "name": "Chapter 7 - main",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/Chapter07/main.dart"
+        },
+        {
+            "name": "Chapter 7 - main_form",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/Chapter07/main_form.dart"
         }
     ]
 }

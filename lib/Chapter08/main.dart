@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/Chapter08/destination_description.dart';
 
 void main() {
   runApp(const MyApp());
@@ -132,19 +131,13 @@ class DestinationDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          DestinationDescriptionWidget(
-            description: "Whitby is a town in the North East of England where Dracula first arrived, taking the form of a dog.",
-          ),
-          ElevatedButton(
-            child: Text("Back"),
-            onPressed: () {
-              // To be added
-            },
-          ),
-        ],
+      body: Center(
+        child: ElevatedButton(
+          child: Text("Back"),
+          onPressed: () {
+            // To be added
+          },
+        ),
       ),
     );
   }

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/Chapter13/destination_list_tile.dart';
-import 'package:hello_world/Chapter13/destination_widget_container.dart';
-import 'package:hello_world/Chapter13/destination_widget_textstyle.dart';
-import 'package:hello_world/Chapter13/sliver_page.dart';
+import 'package:hello_world/Chapter09/destination_description.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,7 +50,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  final _scaffoldKey = GlobalKey<ScaffoldState>();
 
   void _incrementCounter() {
     setState(() {
@@ -75,29 +71,10 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      key: _scaffoldKey,
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
-      ),
-      drawer: Drawer(
-        child: Column(
-          children: [
-            IconButton(
-              onPressed: () => _scaffoldKey.currentState!.closeDrawer(),
-              icon: Icon(Icons.close),
-            ),
-            TextButton(
-              child: Text("Whitby"),
-              onPressed: () {},
-            ),
-            TextButton(
-              child: Text("Saltburn"),
-              onPressed: () {},
-            ),
-          ],
-        ),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -127,61 +104,11 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             ElevatedButton(
-              child: Text('TextStyle'),
+              child: Text('Press this'),
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) {
-                    return DestinationWidgetTextStyle(
-                      name: "Whitby",
-                      description: "Whitby is a town in the North East of England where Dracula first arrived, taking the form of a dog.",
-                    );
-                  }),
-                );
-              },
-            ),
-            ElevatedButton(
-              child: Text('Container decoration'),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return DestinationWidgetContainer(
-                      name: "Saltburn",
-                      description: "Saltburn-by-the-Sea, normally referred to as Saltburn, is the North East's best known location for surfing.",
-                    );
-                  }),
-                );
-              },
-            ),
-            ElevatedButton(
-              onPressed: () => _scaffoldKey.currentState!.openDrawer(),
-              child: Text("Open drawer"),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('The parmo is a famous food of Teesside.'),
-                  ),
-                );
-              },
-              child: const Text('Show SnackBar'),
-            ),
-            ElevatedButton(
-              child: Text('List view'),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return DestinationListTile();
-                  }),
-                );
-              },
-            ),
-            ElevatedButton(
-              child: Text('Sliver page'),
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return SliverPage();
+                    return DestinationDetails(title: "Whitby");
                   }),
                 );
               },
@@ -194,6 +121,31 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class DestinationDetails extends StatelessWidget {
+  DestinationDetails({required this.title});
+  final String title;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(title)),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          DestinationDescriptionWidget(
+            description: "Whitby is a town in the North East of England where Dracula first arrived, taking the form of a dog.",
+          ),
+          ElevatedButton(
+            child: Text("Back"),
+            onPressed: () {
+              // To be added
+            },
+          ),
+        ],
+      ),
     );
   }
 }
