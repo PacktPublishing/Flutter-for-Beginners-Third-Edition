@@ -95,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) {
-                    return Scaffold(body: RotationAnimations());
+                    return Scaffold(appBar: AppBar(), body: RotationAnimations());
                   }),
                 );
               },
@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) {
-                    return Scaffold(body: RotationBounceInAnimations());
+                    return Scaffold(appBar: AppBar(), body: RotationBounceInAnimations());
                   }),
                 );
               },
@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) {
-                    return Scaffold(body: RotationBuilderAnimations());
+                    return Scaffold(appBar: AppBar(), body: RotationBuilderAnimations());
                   }),
                 );
               },

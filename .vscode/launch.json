@@ -106,6 +106,12 @@
             "request": "launch",
             "type": "dart",
             "program": "lib/Chapter09/main.dart"
+        },
+        {
+            "name": "Chapter 11 - main",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/Chapter11/main.dart"
         }
     ]
 }
