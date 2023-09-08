@@ -141,7 +141,7 @@ class DestinationDetails extends StatelessWidget {
           ElevatedButton(
             child: Text("Back"),
             onPressed: () {
-              // To be added
+              Navigator.of(context).pop();
             },
           ),
         ],
