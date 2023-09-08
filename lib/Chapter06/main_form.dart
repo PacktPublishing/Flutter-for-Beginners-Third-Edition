@@ -68,6 +68,7 @@ class VerificationCodeInput extends StatefulWidget {
   final BorderSide borderSide;
   final Function(String) onChanged;
   final TextEditingController controller;
+
   @override
   State<VerificationCodeInput> createState() => _VerificationCodeInputState();
 }
@@ -105,7 +106,7 @@ class VerificationCodeFormField extends FormField<String> {
           builder: (FormFieldState<String> field) {
             _VerificationCodeFormFieldState state = field as _VerificationCodeFormFieldState;
             return VerificationCodeInput(
-              controller: state.controller,
+              controller: state._controller,
               borderSide: BorderSide.none,
               onChanged: (_) => print(_),
             );
@@ -116,26 +117,26 @@ class VerificationCodeFormField extends FormField<String> {
 }
 
 class _VerificationCodeFormFieldState extends FormFieldState<String> {
-  final TextEditingController controller = TextEditingController(text: "");
+  final TextEditingController _controller = TextEditingController(text: "");
   @override
   void initState() {
     super.initState();
-    controller.addListener(_controllerChanged);
+    _controller.addListener(_controllerChanged);
   }
 
   void _controllerChanged() {
-    didChange(controller.text);
+    didChange(_controller.text);
   }
 
   @override
   void reset() {
     super.reset();
-    controller.text = "";
+    _controller.text = "";
   }
 
   @override
   void dispose() {
-    controller?.removeListener(_controllerChanged);
+    _controller?.removeListener(_controllerChanged);
     super.dispose();
   }
 }

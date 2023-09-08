@@ -55,12 +55,12 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             ElevatedButton(
-              child: Text('Press this'),
-              onPressed: () {
+              child: Text('Explore Whitby'),
+              onPressed: () async {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return DestinationDetails(title: "Whitby");
-                  }),
+                  MySlideTransition(
+                    transitionPage: DestinationDetails(title: "Whitby"),
+                  ),
                 );
               },
             ),
@@ -93,4 +93,30 @@ class DestinationDetails extends StatelessWidget {
       ),
     );
   }
+}
+
+class MySlideTransition extends PageRouteBuilder {
+  final Widget transitionPage;
+  MySlideTransition({required this.transitionPage})
+      : super(
+          pageBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+          ) =>
+              transitionPage,
+          transitionsBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+            Widget child,
+          ) =>
+              SlideTransition(
+            position: Tween<Offset>(
+              begin: const Offset(-1, 0),
+              end: Offset.zero,
+            ).animate(animation),
+            child: child,
+          ),
+        );
 }
