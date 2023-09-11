@@ -136,7 +136,7 @@ class _VerificationCodeFormFieldState extends FormFieldState<String> {
 
   @override
   void dispose() {
-    _controller?.removeListener(_controllerChanged);
+    _controller.removeListener(_controllerChanged);
     super.dispose();
   }
 }
