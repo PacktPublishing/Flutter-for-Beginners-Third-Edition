@@ -63,7 +63,7 @@ With the following software and hardware list you can run all code files present
 
 * Flutter Cookbook [[Packt]](https://www.packtpub.com/product/flutter-cookbook/9781838823382?utm_source=github&utm_medium=repository&utm_campaign=9781838823382) [[Amazon]](https://www.amazon.com/dp/1838823387)
 
-## Get to Know the Author
+## Get to Know the Authors
 **Thomas Bailey**
 has an extensive background in tech, working for companies and high-profile firms as a senior developer, solutions architect, and IT director. His education technology company uses Flutter as the sole technology powering their education apps, and he has enjoyed watching Flutter move from its initial beta release to the fully fledged and highly popular framework we see today. He loves to talk tech over a hot chocolate with anyone who will listen and is constantly exploring the cutting edge of tech and how it will shape our industry in the future.
 
