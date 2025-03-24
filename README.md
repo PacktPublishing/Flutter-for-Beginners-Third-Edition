@@ -56,7 +56,9 @@ With the following software and hardware list you can run all code files present
 | 1-13     | IDE - Visual Studio Code or Android Studio    | Windows, Mac OS X, and Linux (Any) |
 | 1-13     | SDK - Flutter                                 | Windows, Mac OS X, and Linux (Any) |
 
+## Errata
 
+* Page 153 (Paragraph 3, under GenstureDetector line 1): **stateless widget** _should be_ **StatefulWidget**
 
 ### Related products <Other books you may enjoy>
 * Flutter Projects [[Packt]](https://www.packtpub.com/product/flutter-projects/9781838647773?utm_source=github&utm_medium=repository&utm_campaign=9781838647773) [[Amazon]](https://www.amazon.com/dp/1838647775)
